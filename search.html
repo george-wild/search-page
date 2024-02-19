@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inclusive+Sans&display=swap"
+        rel="stylesheet">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body onload="loadActions()">
+    <div class="modal-window" id="modalWindow">
+
+    </div>
+    <div class="main-wrapper" id="mainContent">
+        <div class="search-engine-select" id="searchEngineSelect">
+            <button class="search-engine active" id="engineGoogle" onclick="searchEngineSelector('google')"
+                tabindex="2">2</button>
+            <button class="search-engine" id="engineBing" onclick="searchEngineSelector('bing')" tabindex="3">3</button>
+            <button class="search-engine" id="engineDuckduckgo" onclick="searchEngineSelector('duckduckgo')"
+                tabindex="4">4</button>
+            <button class="search-engine" id="engineYandex" onclick="searchEngineSelector('yandex')"
+                tabindex="5">5</button>
+        </div>
+        <h1>Search for anything...</h1>
+        <div class="search" id="search">
+            <label class="hidden-label" for="searchBar">
+                Search Box
+            </label><input type="text" name="search-term" id="searchBar" class="search-bar" placeholder="Search Google"
+                autofocus>
+            <button class="button" onclick="search()" id="searchButton">Go!</button>
+        </div>
+        <div class="search-links" id="searchLinks">
+
+            <div class="link-wrapper">
+                <button class="create-link search-link" onclick="linkModal()">
+                    <img width="75" src="/material-icons/add.svg" alt="plus symbol">
+                </button>
+                <div class="link-title">Add New</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <span style="display: flex; align-items: center;">&copy
+            <script>document.write(new Date().getFullYear())</script>&nbsp;<a style="color: #fff;"
+                href="https://www.georgewild.dev/"> George Wild</a>
+        </span>
+    </div>
+    <script>
+        const searchBar = document.getElementById("searchBar");
+        searchBar.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("searchButton").click();
+            }
+        });
+    </script>
+</body>
+
+</html>
