@@ -10,7 +10,7 @@
 }
 body {
   height: 100vh;
-  background-image: url("topography.svg");
+  background-image: url("/static/topography.svg");
   background-color: #2e3234;
   display: flex;
   margin: 0;
@@ -123,16 +123,16 @@ h6 {
 }
 
 #engineGoogle {
-  background-image: url("/google.svg");
+  background-image: url("/static/icons/google.svg");
 }
 #engineBing {
-  background-image: url("bing.svg");
+  background-image: url("/static/icons/bing.svg");
 }
 #engineDuckduckgo {
-  background-image: url("duckduckgo.svg");
+  background-image: url("/static/icons/duckduckgo.svg");
 }
 #engineYandex {
-  background-image: url("yandex.svg");
+  background-image: url("/static/icons/yandex.svg");
 }
 
 .reindeers {
